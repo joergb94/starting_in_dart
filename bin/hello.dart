@@ -92,6 +92,10 @@ void main() {
       myFunctionPrint('delete');
       break;
   }
+
+  //call class person
+  final People = Person('Ray', 28, 14000);
+  print(People.salaryStatus());
 }
 
 /* 
@@ -139,15 +143,15 @@ enum Status { active, deactived, deleted }
 class Person {
   String name;
   int age;
-  var salry;
+  dynamic salary;
 
-  Person(this.name, this.age, this.salry);
+  Person(this.name, this.age, this.salary);
 
-  String study(var salary) {
+  String salaryStatus() {
     String position = 'Poor';
-    if (salary >= 5000 && salary <= 10000) {
+    if (this.salary >= 5000 && this.salary <= 10000) {
       position = 'Avarage';
-    } else if (salry > 10000) {
+    } else if (this.salary > 10000) {
       position = 'Rich';
     }
     return position;

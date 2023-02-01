@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 void main() {
   print("hello word");
   //this is a short coment
@@ -28,6 +26,7 @@ void main() {
   */
   const myConstant = 'My Constant';
 
+  print("${myValue4} for ${myConstant}");
   /* 
     if you need use constant to time excecution, you do need change the propetery for final
   */
@@ -49,9 +48,11 @@ void main() {
    create value NULL and  change your value
   */
 
-  String? myStringNull;
+  String myStringNull;
   myStringNull = "NO NUll";
   myStringNull = null;
+
+  print(myStringNull);
 
 /* 
   to create list you need the reserved word "List" and the type of list 

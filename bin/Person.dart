@@ -9,6 +9,16 @@ class Person {
   double weight;
   double height;
 
+  /// The function takes a String dni as a required parameter, and then takes a String name, an int age,
+  /// a String sex, a double weight, and a double height as optional parameters
+  ///
+  /// Args:
+  ///   dni (String): String
+  ///   name (String): String. Defaults to none
+  ///   age (int): int. Defaults to 0
+  ///   sex (String): M or F. Defaults to M
+  ///   weight (double): double. Defaults to 0.0
+  ///   height (double): double. Defaults to 0.0
   Person(
     String dni, [
     String name = 'none',
@@ -25,6 +35,7 @@ class Person {
     this.dni = dni;
   }
 
+  /// A constructor.
   Person.noWHD(String name, int age, String sex) {
     this.name = name;
     this.age = age;
@@ -34,6 +45,10 @@ class Person {
     this.dni = generateDNI();
   }
 
+  /// It generates a random number between 0 and 9, and then adds it to the string "E" 7 times
+  ///
+  /// Returns:
+  ///   A string with the format "E" + 7 random numbers.
   String generateDNI() {
     var rndnumber = "E";
     var rnd = new Random();
@@ -44,6 +59,11 @@ class Person {
   }
 
   //methods
+
+  /// It takes the weight and height of a person and returns a number that represents the person's BMI
+  ///
+  /// Returns:
+  ///   The request variable is being returned.
   int calculateIMC() {
     double imc = 0;
     int request = 0;

@@ -5,9 +5,9 @@ class Person {
   int age;
 
   //constructor
-  Person(String nameC, [int ageC = 18]) {
-    this.name = nameC;
-    this.age = ageC;
+  Person(this.name, [this.age = 18]) {
+    this.name = this.name;
+    this.age = this.age;
   }
 
   void showData() {

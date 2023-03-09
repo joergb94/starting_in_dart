@@ -3,7 +3,7 @@ void main(List<String> args) {
 
   int a = 10;
   double b = 5.5;
-  int c;
+  int? c;
 
   int _a = 30;
   double $b = 40.0;

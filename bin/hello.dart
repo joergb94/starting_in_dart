@@ -48,7 +48,7 @@ void main() {
    create value NULL and  change your value
   */
 
-  String myStringNull;
+  String? myStringNull;
   myStringNull = "NO NUll";
   myStringNull = null;
 

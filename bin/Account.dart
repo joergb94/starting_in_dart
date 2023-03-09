@@ -1,16 +1,10 @@
-import 'dart:math';
-import 'dart:io';
-
 class Account {
   String headline;
   double quantity;
 
-  Account(String headline, [double quantity = 0.0]) {
-    this.headline = headline;
-    this.quantity = quantity;
-  }
+  Account(this.headline, [this.quantity = 0.0]);
 
-  double get_into_account(double new_quantity) {
+  void get_into_account(double new_quantity) {
     if (new_quantity > 0) {
       this.quantity = this.quantity + new_quantity;
       showData();
@@ -19,7 +13,7 @@ class Account {
     }
   }
 
-  double subtract_into_account(double new_quantity) {
+  void subtract_into_account(double new_quantity) {
     if (new_quantity < this.quantity) {
       this.quantity = this.quantity - new_quantity;
       if (this.quantity > 0) {

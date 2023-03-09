@@ -7,9 +7,7 @@ class Password {
   String letters = "abcdefghijklmnopqrstuvwxyz";
   String numbers = "1234567890";
 
-  Password([String pass = '']) {
-    this.pass = pass.length > 0 ? pass : RandomPassword();
-  }
+  Password([this.pass = '']);
 
   bool isStrong() {
     int check = 0;

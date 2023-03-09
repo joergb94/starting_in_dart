@@ -19,29 +19,18 @@ class Person {
   ///   sex (String): M or F. Defaults to M
   ///   weight (double): double. Defaults to 0.0
   ///   height (double): double. Defaults to 0.0
-  Person(
-    String dni, [
-    String name = 'none',
-    int age = 0,
-    String sex = 'M',
-    double weight = 0.0,
-    double height = 0.0,
-  ]) {
-    this.name = name;
-    this.age = age;
+  Person(this.dni,
+      [this.name = 'none',
+      this.age = 0,
+      this.sex = 'M',
+      this.weight = 0.0,
+      this.height = 0.0]) {
     this.sex = checkSex();
-    this.weight = weight;
-    this.height = height;
-    this.dni = dni;
   }
 
-  /// A constructor.
-  Person.noWHD(String name, int age, String sex) {
-    this.name = name;
-    this.age = age;
+  Person.noWHD(this.name, this.age, this.sex,
+      [this.dni = '', this.weight = 0.0, this.height = 0.0]) {
     this.sex = checkSex();
-    this.weight = 0.0;
-    this.height = 0.0;
     this.dni = generateDNI();
   }
 

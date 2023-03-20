@@ -8,15 +8,9 @@ class Person {
   Person(this.name, [this.age = 18]);
 
   //name constructors
-  void gest() {
-    this.name = "Guest";
-    this.age = 1;
-  }
+  Person.gest([this.name = "Guest", this.age = 0]);
 
-  void noAge(String name) {
-    this.name = name;
-    this.age = 0;
-  }
+  Person.noAge(this.name, [this.age = 0]);
 
   void showData() {
     print("${name} is ${age}");
@@ -38,12 +32,10 @@ void main() {
   Person personTwo = Person('Jose');
   personTwo.showData();
 
-  Person personThree = Person('Ray', 20);
-  personThree.gest();
+  Person personThree = Person.gest();
   personThree.showData();
 
-  Person personFour = Person('Ray', 20);
-  personFour.noAge('Wiliam');
+  Person personFour = Person.noAge('Wiliam');
   personFour.showData();
 
   PersonX x = PersonX("Mario");
